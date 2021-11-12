@@ -1,6 +1,6 @@
 export default function Ep3() {
   return (
-    <div className="ep3">
+    <div className="sass-ep3">
       <div />
       <div />
       <div />

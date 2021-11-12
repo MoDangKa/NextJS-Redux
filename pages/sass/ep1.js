@@ -1,8 +1,8 @@
 export default function Ep1() {
   return (
-    <div className="ep1 one">
+    <div className="sass-ep1 one">
       <div />
     </div>
-    // <div className="ep1 two"/>
+    // <div className="sass-ep1 two"/>
   );
 }

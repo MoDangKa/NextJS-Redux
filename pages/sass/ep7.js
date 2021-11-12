@@ -1,6 +1,6 @@
 export default function Ep7() {
   return (
-    <div className="ep7">
+    <div className="sass-ep7">
       <div className="card">
         <div className="image">
           <div className="img"></div>

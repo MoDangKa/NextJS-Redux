@@ -1,6 +1,6 @@
 export default function Ep9() {
   return (
-    <div className="ep9">
+    <div className="sass-ep9">
       <div className="door">
         <i />
         <i />

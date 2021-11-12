@@ -1,457 +1,458 @@
-.ep1 {
-    @include full-screen($color-1);
+.sass-ep1 {
+  @include full-screen($color-1);
 
-    &.one {
-        @include grid-center;
+  &.one {
+    @include grid-center;
 
-        div {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            background-color: $color-2;
-            border: 30px solid $color-3;
-            border-left: 30px solid $color-2;
-            border-right: 30px solid $color-2;
-            transform: rotate(45deg);
-            box-shadow: 0 0 0 30px $color-2;
-            box-sizing: border-box;
-        }
+    div {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background-color: $color-2;
+      border: 30px solid $color-3;
+      border-left: 30px solid $color-2;
+      border-right: 30px solid $color-2;
+      transform: rotate(45deg);
+      box-shadow: 0 0 0 30px $color-2;
+      box-sizing: border-box;
     }
+  }
 
-    &.two {
-        position: relative;
-
-        &::after {
-            @include position-center;
-            content: "";
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            background-color: $color-2;
-            border: 30px solid $color-3;
-            border-left: 30px solid $color-2;
-            border-right: 30px solid $color-2;
-            transform: rotate(45deg);
-            box-shadow: 0 0 0 30px $color-2;
-            box-sizing: border-box;
-            z-index: 1;
-        }
-    }
-}
-
-.ep2 {
-    @include full-screen($color-4);
-    @include flex-center;
+  &.two {
     position: relative;
-    z-index: 0;
 
-    div {
-        width: 100px;
-        height: 100px;
-        margin: 20px;
-        position: relative;
-        background-color: $color-3;
-        border-radius: 50%;
-
-        &:nth-child(1)::after {
-            content: "";
-            position: absolute;
-            top: -50px;
-            width: 100px;
-            height: 150px;
-            border-radius: 50px;
-            background-color: $color-2;
-            z-index: -1;
-        }
-
-        &:nth-child(2)::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 100px;
-            height: 150px;
-            border-radius: 50px;
-            background-color: $color-1;
-            z-index: -1;
-        }
+    &::after {
+      @include position-center;
+      content: "";
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background-color: $color-2;
+      border: 30px solid $color-3;
+      border-left: 30px solid $color-2;
+      border-right: 30px solid $color-2;
+      transform: rotate(45deg);
+      box-shadow: 0 0 0 30px $color-2;
+      box-sizing: border-box;
+      z-index: 1;
     }
+  }
 }
 
-.ep3 {
-    @include full-screen($color-5);
-    @include flex-center;
+.sass-ep2 {
+  @include full-screen($color-4);
+  @include flex-center;
+  position: relative;
+  z-index: 0;
 
-    div {
-        position: absolute;
-        top: calc(50% - 50px);
-        left: calc(50% - 100px);
-        width: 100px;
-        height: 50px;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        transform-origin: bottom right;
+  div {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    background-color: $color-3;
+    border-radius: 50%;
 
-        &:nth-child(odd) {
-            background-color: $color-6;
-        }
-
-        &:nth-child(even) {
-            background-color: $color-3;
-        }
-
-        @for $i from 1 through 4 {
-            &:nth-child(#{$i}) {
-                transform: rotate(calc(90deg * #{$i}));
-            }
-        }
+    &:nth-child(1)::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      width: 100px;
+      height: 150px;
+      border-radius: 50px;
+      background-color: $color-2;
+      z-index: -1;
     }
+
+    &:nth-child(2)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 150px;
+      border-radius: 50px;
+      background-color: $color-1;
+      z-index: -1;
+    }
+  }
 }
 
-.ep4 {
-    @include full-screen($color-7);
-    @include grid-center;
+.sass-ep3 {
+  @include full-screen($color-5);
+  @include flex-center;
 
-    .content {
-        columns: 3 300px;
-        gap: 10px;
-        width: 80%;
-        max-width: 1000px;
+  div {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 100px);
+    width: 100px;
+    height: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    transform-origin: bottom right;
+
+    &:nth-child(odd) {
+      background-color: $color-6;
     }
+
+    &:nth-child(even) {
+      background-color: $color-3;
+    }
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        transform: rotate(calc(90deg * #{$i}));
+      }
+    }
+  }
 }
 
-.ep5 {
-    @include full-screen;
-    @include grid-center;
-    background: linear-gradient(45deg, #ff00fc, #0001ff, #00edff, #ff7700);
-    background-size: 800% 800%;
+.sass-ep4 {
+  @include full-screen($color-7);
+  @include grid-center;
 
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
+  .content {
+    columns: 3 300px;
+    gap: 10px;
+    width: 80%;
+    max-width: 1000px;
+  }
+}
 
-    .glass {
-        width: 500px;
-        height: 300px;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        border: 1px solid rgba(#ffffff, 0.18);
-        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
-    }
+.sass-ep5 {
+  @include full-screen;
+  @include grid-center;
+  background: linear-gradient(45deg, #ff00fc, #0001ff, #00edff, #ff7700);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+
+  .glass {
+    width: 500px;
+    height: 300px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(#ffffff, 0.18);
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  }
 }
 
 @-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    50% {
-        background-position: 100% 50%
-    }
+  50% {
+    background-position: 100% 50%;
+  }
 
-    100% {
-        background-position: 0% 50%
-    }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    50% {
-        background-position: 100% 50%
-    }
+  50% {
+    background-position: 100% 50%;
+  }
 
-    100% {
-        background-position: 0% 50%
-    }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    50% {
-        background-position: 100% 50%
-    }
+  50% {
+    background-position: 100% 50%;
+  }
 
-    100% {
-        background-position: 0% 50%
-    }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.ep6 {
-    @include full-screen(#f8f8f8);
-    @include grid-center;
+.sass-ep6 {
+  @include full-screen(#f8f8f8);
+  @include grid-center;
 
-    .card {
-        position: relative;
-        width: 300px;
-        height: 400px;
-        background-color: white;
-        box-shadow: 0 25px 50px rgb(0 0 0 / 15%);
-        border-radius: 20px;
-
-
-        i {
-            position: absolute;
-            top: 40px;
-            left: -15px;
-            width: 200px;
-            height: 50px;
-            background: $color-4;
-            border-radius: 30px;
-            border-bottom-left-radius: 0;
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 50px;
-                width: 15px;
-                height: 30px;
-                background: #333;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-                z-index: 2;
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50px;
-                width: 15px;
-                height: 15px;
-                background: $color-4;
-                z-index: 1;
-            }
-        }
-    }
-}
-
-.ep7 {
-    @include full-screen(#ccc);
-    @include grid-center;
-
-    .card {
-        width: 500px;
-        height: 250px;
-        position: relative;
-        overflow: hidden;
-
-        .image {
-            width: 90%;
-            margin: 0 auto;
-            height: 100%;
-
-            .img {
-                background: url("https://images7.alphacoders.com/112/thumb-1920-1124067.jpg");
-                background-size: 130%;
-                background-position-x: center;
-                height: 100%;
-                border-top-left-radius: 20px;
-                border-top-right-radius: 20px;
-                transition: background-size 0.3s ease-in-out;
-            }
-        }
-
-        .content {
-            color: white;
-            position: absolute;
-            padding: 15px;
-            bottom: 0;
-            height: 50px;
-            background: rgb(0 0 0 / 50%);
-            backdrop-filter: blur(20px);
-            border-radius: 15px;
-            transition: height 0.3s ease-in-out;
-
-            h3 {
-                margin-top: 0;
-                margin-bottom: 10px;
-                line-height: 20px;
-                font-weight: 600;
-            }
-
-            p {
-                font-size: 14px;
-                font-weight: 200;
-                margin-top: 0;
-                opacity: 0;
-                transition: opacity 0.3s ease-in-out;
-            }
-        }
-
-        button {
-            float: right;
-            padding: 5px 10px;
-            background: #0aa0e2;
-            border: 0;
-            color: white;
-            border-radius: 5px;
-            font-size: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-
-            &:hover {
-                background-color: #098fc8;
-            }
-        }
-
-        &:hover {
-            .img {
-                background-size: 100%;
-            }
-
-            .content {
-                height: 83%;
-
-                p {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-
-.ep8 {
-    @include full-screen($color-8);
-    @include grid-center;
-
-    div {
-        background-color: $color-9;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 150px;
-            aspect-ratio: 1;
-            background-color: $color-10;
-            top: 90px;
-            left: 68px;
-            transform: rotate(45deg);
-            box-shadow: -30px 130px $color-10;
-        }
-    }
-}
-
-.ep9 {
-    @include full-screen($color-5);
-    @include grid-center;
-
-    .door {
-        background-color: $color-6;
-        width: 100px;
-        height: 150px;
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        overflow: hidden;
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-
-
-        i {
-            position: relative;
-            background-color: $color-5;
-            width: 100%;
-            height: 20px;
-            border-top: 4px solid $color-6;
-
-            @for $i from 1 through 4 {
-                &:nth-child(#{$i}) {
-                    left: calc(100% - calc(20% * $i));
-                }
-            }
-        }
-    }
-}
-
-.ep10 {
-    @include full-screen($color-5);
-    @include flex-center;
+  .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 25px 50px rgb(0 0 0 / 15%);
+    border-radius: 20px;
 
     i {
-        position: relative;
-        width: 80px;
-        height: 80px;
-        // background: $color-12;
-        border-radius: 50%;
+      position: absolute;
+      top: 40px;
+      left: -15px;
+      width: 200px;
+      height: 50px;
+      background: $color-4;
+      border-radius: 30px;
+      border-bottom-left-radius: 0;
 
-        margin: 1px;
-        border: 20px solid $color-12;
-
-        &:first-child {
-            border-color: $color-11;
-        }
-
-        &:nth-child(2)::before {
-            content: "";
-            position: absolute;
-            top: -40px;
-            right: -20px;
-            width: 20px;
-            height: 65px;
-            background-color: $color-12;
-            border-radius: 20px;
-        }
-    }
-}
-
-.ep11 {
-    @include full-screen($color-13);
-    @include grid-center;
-
-    i {
-        position: relative;
-        width: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50px;
+        width: 15px;
         height: 30px;
-        transform: rotate(45deg);
-        background-color: $color-15;
-        box-shadow: 0 0 0 37px $color-13, 0 0 0 67px $color-14;
+        background: #333;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        z-index: 2;
+      }
 
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            background-color: $color-13;
-        }
-
-        &::before {
-            top: -68px;
-            width: 100%;
-            height: calc(100% + 2px);
-        }
-
-        &::after {
-            left: -68px;
-            width: calc(100% + 2px);
-            height: 100%;
-        }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        width: 15px;
+        height: 15px;
+        background: $color-4;
+        z-index: 1;
+      }
     }
+  }
 }
 
-.ep12 {
-    height: 100vh;
-    $elements: 10;
+.sass-ep7 {
+  @include full-screen(#ccc);
+  @include grid-center;
 
-    @for $i from 1 through $elements {
-        $red: ($i*10)+150;
-        $green: (($i*10)+150)/2;
-        $blue: (($i*10)+150)/2;
+  .card {
+    width: 500px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
 
-        div:nth-child(#{$i}) {
-            background: rgb($red, $green, $blue);
-            width: 100%;
-            height: 10%;
-            box-shadow: 0 -1px #{($elements - $i)*2}px rgba(0, 0, 0, 0.7);
-        }
+    .image {
+      width: 90%;
+      margin: 0 auto;
+      height: 100%;
+
+      .img {
+        background: url("https://images7.alphacoders.com/112/thumb-1920-1124067.jpg");
+        background-size: 130%;
+        background-position-x: center;
+        height: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        transition: background-size 0.3s ease-in-out;
+      }
     }
 
+    .content {
+      color: white;
+      position: absolute;
+      padding: 15px;
+      bottom: 0;
+      height: 50px;
+      background: rgb(0 0 0 / 50%);
+      backdrop-filter: blur(20px);
+      border-radius: 15px;
+      transition: height 0.3s ease-in-out;
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        line-height: 20px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 200;
+        margin-top: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+    }
+
+    button {
+      float: right;
+      padding: 5px 10px;
+      background: #0aa0e2;
+      border: 0;
+      color: white;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #098fc8;
+      }
+    }
+
+    &:hover {
+      .img {
+        background-size: 100%;
+      }
+
+      .content {
+        height: 83%;
+
+        p {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.sass-ep8 {
+  @include full-screen($color-8);
+  @include grid-center;
+
+  div {
+    background-color: $color-9;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 150px;
+      aspect-ratio: 1;
+      background-color: $color-10;
+      top: 90px;
+      left: 68px;
+      transform: rotate(45deg);
+      box-shadow: -30px 130px $color-10;
+    }
+  }
+}
+
+.sass-ep9 {
+  @include full-screen($color-5);
+  @include grid-center;
+
+  .door {
+    background-color: $color-6;
+    width: 100px;
+    height: 150px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    i {
+      position: relative;
+      background-color: $color-5;
+      width: 100%;
+      height: 20px;
+      border-top: 4px solid $color-6;
+
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          left: calc(100% - calc(20% * $i));
+        }
+      }
+    }
+  }
+}
+
+.sass-ep10 {
+  @include full-screen($color-5);
+  @include flex-center;
+
+  i {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    // background: $color-12;
+    border-radius: 50%;
+
+    margin: 1px;
+    border: 20px solid $color-12;
+
+    &:first-child {
+      border-color: $color-11;
+    }
+
+    &:nth-child(2)::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -20px;
+      width: 20px;
+      height: 65px;
+      background-color: $color-12;
+      border-radius: 20px;
+    }
+  }
+}
+
+.sass-ep11 {
+  @include full-screen($color-13);
+  @include grid-center;
+
+  i {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    background-color: $color-15;
+    box-shadow: 0 0 0 37px $color-13, 0 0 0 67px $color-14;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $color-13;
+    }
+
+    &::before {
+      top: -68px;
+      width: 100%;
+      height: calc(100% + 2px);
+    }
+
+    &::after {
+      left: -68px;
+      width: calc(100% + 2px);
+      height: 100%;
+    }
+  }
+}
+
+.sass-ep12 {
+  height: 100vh;
+  $elements: 10;
+
+  @for $i from 1 through $elements {
+    $red: ($i * 10)+150;
+    $green: (($i * 10)+150)/2;
+    $blue: (($i * 10)+150)/2;
+
+    div:nth-child(#{$i}) {
+      background: rgb($red, $green, $blue);
+      width: 100%;
+      height: 10%;
+      box-shadow: 0 -1px #{($elements - $i) * 2}px rgba(0, 0, 0, 0.7);
+    }
+  }
 }

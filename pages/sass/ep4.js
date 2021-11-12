@@ -1,6 +1,6 @@
 export default function Ep4() {
   return (
-    <div className="ep4">
+    <div className="sass-ep4">
       <div className="content">
         <h3>What is Lorem Ipsum?</h3>
         <p>
@@ -30,9 +30,9 @@ export default function Ep4() {
           section 1.10.32.
         </p>
         <p>
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced
+          The standard chunk of Lorem Ipsum used since the 1500s is rsass-eproduced
           below for those interested. Sections 1.10.32 and 1.10.33 from "de
-          Finibus Bonorum et Malorum" by Cicero are also reproduced in their
+          Finibus Bonorum et Malorum" by Cicero are also rsass-eproduced in their
           exact original form, accompanied by English versions from the 1914
           translation by H. Rackham.
         </p>
