@@ -19,12 +19,12 @@ export default function Html() {
       </details>
 
       <div style={{ display: "grid", marginBottom: 30 }}>
-        <input type="color" />
-        <input type="range" value="2" min="0" max="10" />
-        <input type="date" />
-        <input type="datetime-local" />
-        <input type="time" />
-        <input type="week" />
+        <input type="color" readOnly />
+        <input type="range" value="2" min="0" max="10" readOnly />
+        <input type="date" readOnly />
+        <input type="datetime-local" readOnly />
+        <input type="time" readOnly />
+        <input type="week" readOnly />
       </div>
 
       <div style={{ display: "grid", marginBottom: 30 }}>

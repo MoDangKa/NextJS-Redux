@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Ep12() {
   return (
     <div className="sass-ep12">

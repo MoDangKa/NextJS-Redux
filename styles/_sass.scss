@@ -1,5 +1,5 @@
 .sass-ep1 {
-  @include full-screen($color-1);
+  @include full-screen($c1);
 
   &.one {
     @include grid-center;
@@ -8,12 +8,12 @@
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      background-color: $color-2;
-      border: 30px solid $color-3;
-      border-left: 30px solid $color-2;
-      border-right: 30px solid $color-2;
+      background-color: $c2;
+      border: 30px solid $c3;
+      border-left: 30px solid $c2;
+      border-right: 30px solid $c2;
       transform: rotate(45deg);
-      box-shadow: 0 0 0 30px $color-2;
+      box-shadow: 0 0 0 30px $c2;
       box-sizing: border-box;
     }
   }
@@ -27,12 +27,12 @@
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      background-color: $color-2;
-      border: 30px solid $color-3;
-      border-left: 30px solid $color-2;
-      border-right: 30px solid $color-2;
+      background-color: $c2;
+      border: 30px solid $c3;
+      border-left: 30px solid $c2;
+      border-right: 30px solid $c2;
       transform: rotate(45deg);
-      box-shadow: 0 0 0 30px $color-2;
+      box-shadow: 0 0 0 30px $c2;
       box-sizing: border-box;
       z-index: 1;
     }
@@ -40,7 +40,7 @@
 }
 
 .sass-ep2 {
-  @include full-screen($color-4);
+  @include full-screen($c4);
   @include flex-center;
   position: relative;
   z-index: 0;
@@ -50,7 +50,7 @@
     height: 100px;
     margin: 20px;
     position: relative;
-    background-color: $color-3;
+    background-color: $c3;
     border-radius: 50%;
 
     &:nth-child(1)::after {
@@ -60,7 +60,7 @@
       width: 100px;
       height: 150px;
       border-radius: 50px;
-      background-color: $color-2;
+      background-color: $c2;
       z-index: -1;
     }
 
@@ -71,14 +71,14 @@
       width: 100px;
       height: 150px;
       border-radius: 50px;
-      background-color: $color-1;
+      background-color: $c1;
       z-index: -1;
     }
   }
 }
 
 .sass-ep3 {
-  @include full-screen($color-5);
+  @include full-screen($c5);
   @include flex-center;
 
   div {
@@ -92,11 +92,11 @@
     transform-origin: bottom right;
 
     &:nth-child(odd) {
-      background-color: $color-6;
+      background-color: $c6;
     }
 
     &:nth-child(even) {
-      background-color: $color-3;
+      background-color: $c3;
     }
 
     @for $i from 1 through 4 {
@@ -108,7 +108,7 @@
 }
 
 .sass-ep4 {
-  @include full-screen($color-7);
+  @include full-screen($c7);
   @include grid-center;
 
   .content {
@@ -204,7 +204,7 @@
       left: -15px;
       width: 200px;
       height: 50px;
-      background: $color-4;
+      background: $c4;
       border-radius: 30px;
       border-bottom-left-radius: 0;
 
@@ -226,7 +226,7 @@
         top: 50px;
         width: 15px;
         height: 15px;
-        background: $color-4;
+        background: $c4;
         z-index: 1;
       }
     }
@@ -319,11 +319,11 @@
 }
 
 .sass-ep8 {
-  @include full-screen($color-8);
+  @include full-screen($c8);
   @include grid-center;
 
   div {
-    background-color: $color-9;
+    background-color: $c9;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -335,21 +335,21 @@
       position: absolute;
       width: 150px;
       aspect-ratio: 1;
-      background-color: $color-10;
+      background-color: $c10;
       top: 90px;
       left: 68px;
       transform: rotate(45deg);
-      box-shadow: -30px 130px $color-10;
+      box-shadow: -30px 130px $c10;
     }
   }
 }
 
 .sass-ep9 {
-  @include full-screen($color-5);
+  @include full-screen($c5);
   @include grid-center;
 
   .door {
-    background-color: $color-6;
+    background-color: $c6;
     width: 100px;
     height: 150px;
     border-top-left-radius: 50px;
@@ -361,10 +361,10 @@
 
     i {
       position: relative;
-      background-color: $color-5;
+      background-color: $c5;
       width: 100%;
       height: 20px;
-      border-top: 4px solid $color-6;
+      border-top: 4px solid $c6;
 
       @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
@@ -376,21 +376,21 @@
 }
 
 .sass-ep10 {
-  @include full-screen($color-5);
+  @include full-screen($c5);
   @include flex-center;
 
   i {
     position: relative;
     width: 80px;
     height: 80px;
-    // background: $color-12;
+    // background: $c12;
     border-radius: 50%;
 
     margin: 1px;
-    border: 20px solid $color-12;
+    border: 20px solid $c12;
 
     &:first-child {
-      border-color: $color-11;
+      border-color: $c11;
     }
 
     &:nth-child(2)::before {
@@ -400,14 +400,14 @@
       right: -20px;
       width: 20px;
       height: 65px;
-      background-color: $color-12;
+      background-color: $c12;
       border-radius: 20px;
     }
   }
 }
 
 .sass-ep11 {
-  @include full-screen($color-13);
+  @include full-screen($c13);
   @include grid-center;
 
   i {
@@ -415,14 +415,14 @@
     width: 30px;
     height: 30px;
     transform: rotate(45deg);
-    background-color: $color-15;
-    box-shadow: 0 0 0 37px $color-13, 0 0 0 67px $color-14;
+    background-color: $c15;
+    box-shadow: 0 0 0 37px $c13, 0 0 0 67px $c14;
 
     &::before,
     &::after {
       content: "";
       position: absolute;
-      background-color: $color-13;
+      background-color: $c13;
     }
 
     &::before {
@@ -453,6 +453,139 @@
       width: 100%;
       height: 10%;
       box-shadow: 0 -1px #{($elements - $i) * 2}px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+.sass-ep13 {
+  @include full-screen($c16);
+  @include grid-center;
+
+  > div {
+    @include flex-center;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    transform: rotate(45deg);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 220px;
+      background-color: $c17;
+      border-radius: 50px;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    i {
+      position: absolute;
+      display: block;
+      z-index: 1;
+
+      &:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        background-color: $c16;
+      }
+
+      &:nth-child(2) {
+        width: 60px;
+        height: 60px;
+        background-color: $c18;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.sass-ep14 {
+  $val: 40px;
+  $half: #{$val / 2};
+  $quarter: #{$val / 4};
+  $corner: -#{$half};
+  $pos: calc(50% - $half);
+
+  @include full-screen($c5);
+  position: relative;
+  overflow: hidden;
+
+  > i {
+    content: "";
+    position: absolute;
+    border-radius: $half;
+
+    &:nth-child(1) {
+      top: $corner;
+      left: $pos;
+      width: $val;
+      height: 50%;
+      background-color: $c10;
+    }
+
+    &:nth-child(2) {
+      bottom: $corner;
+      left: $pos;
+      width: $val;
+      height: 50%;
+      background-color: $c10;
+    }
+
+    &:nth-child(3) {
+      bottom: $pos;
+      left: $corner;
+      width: 50%;
+      height: $val;
+      background-color: $c19;
+    }
+
+    &:nth-child(4) {
+      top: $pos;
+      right: $corner;
+      width: 50%;
+      height: $val;
+      background-color: $c19;
+    }
+  }
+}
+
+.sass-ep15 {
+  @include full-screen($c20);
+  @include grid-center;
+
+  > div {
+    position: relative;
+    top: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: $c21;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: 60px;
+      height: 60px;
+      background-color: $c23;
+      transform-origin: bottom right;
+      transform: rotate(37deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 80px;
+      height: 80px;
+      background-color: $c22;
+      transform-origin: bottom left;
+      transform: rotate(-53deg);
     }
   }
 }
