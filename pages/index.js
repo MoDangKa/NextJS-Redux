@@ -7,29 +7,29 @@ import { connect } from "react-redux";
 import { counterAction } from "../store/counter";
 
 function Home({ counter, incrementCounter, decrementCounter, refreshCounter }) {
-  useEffect(() => {
-    console.log(counter);
-  }, [counter]);
+  // useEffect(() => {
+  //   console.log(counter);
+  // }, [counter]);
 
-  useEffect(() => {
-    // const cars = ["lambo", "honda", "ford"];
-    // console.log(cars.includes("honda"));
-    // console.log(cars.includes("ferrari"));
+  // useEffect(() => {
+  // const cars = ["lambo", "honda", "ford"];
+  // console.log(cars.includes("honda"));
+  // console.log(cars.includes("ferrari"));
 
-    // const numbers = [2, 4, 5, 6, 7];
-    // const find = numbers.find((num) => num % 2 !== 0);
-    // console.log(find); // 5
+  // const numbers = [2, 4, 5, 6, 7];
+  // const find = numbers.find((num) => num % 2 !== 0);
+  // console.log(find); // 5
 
-    // const filter = numbers.filter((num) => num % 2 !== 0);
-    // console.log(filter); // 5,7
+  // const filter = numbers.filter((num) => num % 2 !== 0);
+  // console.log(filter); // 5,7
 
-    // const reduce = numbers.reduce((previosValue, currentValue) => {
-    //   return previosValue + currentValue;
-    // });
-    // console.log(reduce); 
+  // const reduce = numbers.reduce((previosValue, currentValue) => {
+  //   return previosValue + currentValue;
+  // });
+  // console.log(reduce);
 
-    // const arr
-  }, []);
+  // const arr
+  // }, []);
 
   const handleCountUp = () => {
     incrementCounter();
